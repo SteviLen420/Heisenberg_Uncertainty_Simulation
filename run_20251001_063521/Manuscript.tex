@@ -1,5 +1,7 @@
 \subsection{Results and Discussion}\label{results-and-discussion}
 
+\textbf{Author}: Stefan Len
+
 (run\_20251001\_063521)
 
 This chapter presents the results of a numerical simulation of Gaussian
@@ -8,9 +10,23 @@ qualitative verification of the Heisenberg uncertainty principle. The
 analysis covers the investigation of initial states, the behavior of the
 uncertainty product, and the time evolution of the system.
 
-\subsubsection{Presentation of Results}\label{presentation-of-results}
+\subsection{Abstract}\label{abstract}
 
-In the simulation, we examined the behavior of quantum mechanical wave
+I present a minimal numerical demonstration of the Heisenberg
+Uncertainty Principle using Gaussian wave packets in one spatial
+dimension. By systematically varying the initial position spread, I
+numerically verify the reciprocal relationship between position and
+momentum uncertainties and confirm that their product remains bounded by
+the theoretical minimum of \(ħ/2\). In addition, I simulate the free
+time evolution of the wave packet, illustrating the spreading of the
+position uncertainty while the momentum distribution remains constant.
+The results highlight the role of Gaussian wave packets as
+minimum-uncertainty states and provide an accessible, reproducible
+teaching tool for quantum mechanics.
+
+\subsection{Presentation of Results}\label{presentation-of-results}
+
+In the simulation, I examined the behavior of quantum mechanical wave
 packets in one dimension. The initial states were described by Gaussian
 functions, the standard deviation (\(σ_x\)) of which was systematically
 varied.
@@ -20,7 +36,7 @@ varied.
 The \texttt{heisenberg\_scan.csv} dataset and the
 \texttt{uncertainty\_product.png} plot generated from it clearly
 demonstrate the inverse relationship between position uncertainty
-(\(Δx\)) and momentum uncertainty (\(Δp\)). As we increased the standard
+(\(Δx\)) and momentum uncertainty (\(Δp\)). As I increased the standard
 deviation of the initial wave packet in position space, i.e., the value
 of \(Δx\), the measured standard deviation in momentum representation,
 \(Δp\), decreased accordingly. This behavior stems from the fundamental
@@ -75,7 +91,7 @@ time, resulting in an increase in \(Δx\).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{Discussion}\label{discussion}
+\subsection{Discussion}\label{discussion}
 
 The presented numerical results confirm and illustrate fundamental
 concepts of quantum mechanics from several perspectives.
@@ -88,7 +104,7 @@ these two physical quantities. Their product never falls below the
 theoretical limit of \(ħ/2\), which is an inherent property of quantum
 systems.
 
-\textbf{The Gaussian Wave Packet as a Minimum Uncertainty State} Our
+\textbf{The Gaussian Wave Packet as a Minimum Uncertainty State} My
 results highlight the special role that Gaussian wave packets play in
 quantum mechanics. The fact that their uncertainty product \(Δx·Δp\)
 assumes the minimum possible value, \(ħ/2\), means that these states are
@@ -113,3 +129,19 @@ explore one of the most important and least intuitive principles of
 quantum mechanics. The visual results (plots and density distributions)
 effectively aid in understanding these concepts, bridging the gap
 between abstract mathematical formalism and physical reality.
+
+\subsection{Conclusion}\label{conclusion}
+
+Through a simple but rigorous numerical experiment, I have demonstrated
+the validity of the Heisenberg Uncertainty Principle. The results
+confirmed the inverse relationship between position and momentum
+uncertainties, with their product consistently satisfying the lower
+bound of ħ/2. Furthermore, the time evolution simulation highlighted the
+natural spreading of Gaussian wave packets, reinforcing their role as
+minimum-uncertainty states in quantum mechanics.
+
+This study is intentionally minimal and pedagogical: the reproducible
+Python code provides a lightweight yet precise tool for teaching and
+exploring quantum mechanics. While the focus here was on the Heisenberg
+relation, the methodology can be extended to investigate more complex
+quantum systems and educational demonstrations.
