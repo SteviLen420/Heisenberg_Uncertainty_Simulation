@@ -1,9 +1,15 @@
 ## Results and Discussion
+**Author**: Stefan Len
+
 (run_20251001_063521)
 
 This chapter presents the results of a numerical simulation of Gaussian wave packets, with a particular focus on the quantitative and qualitative verification of the Heisenberg uncertainty principle. The analysis covers the investigation of initial states, the behavior of the uncertainty product, and the time evolution of the system.
 
-### Presentation of Results
+## Abstract
+
+We present a minimal numerical demonstration of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. By systematically varying the initial position spread, we numerically verify the reciprocal relationship between position and momentum uncertainties and confirm that their product remains bounded by the theoretical minimum of $ħ/2$. In addition, we simulate the free time evolution of the wave packet, illustrating the spreading of the position uncertainty while the momentum distribution remains constant. The results highlight the role of Gaussian wave packets as minimum-uncertainty states and provide an accessible, reproducible teaching tool for quantum mechanics.
+
+## Presentation of Results
 
 In the simulation, we examined the behavior of quantum mechanical wave packets in one dimension. The initial states were described by Gaussian functions, the standard deviation ($σ_x$) of which was systematically varied.
 
@@ -42,7 +48,7 @@ Figure 4: The change in position uncertainty $Δx(t)$ over time for a freely pro
 
 ---
 
-### Discussion
+## Discussion
 
 The presented numerical results confirm and illustrate fundamental concepts of quantum mechanics from several perspectives.
 
@@ -57,3 +63,11 @@ The study of time evolution shows that although the position uncertainty ($Δx(t
 
 **Educational and Illustrative Value**
 Finally, this simulation possesses outstanding educational and demonstrative value. The underlying Python code (which forms the basis of the simulation) is easy to run and reproduce, allowing students and researchers to interactively explore one of the most important and least intuitive principles of quantum mechanics. The visual results (plots and density distributions) effectively aid in understanding these concepts, bridging the gap between abstract mathematical formalism and physical reality. 
+
+## Conclusion
+
+Through a simple but rigorous numerical experiment, we have demonstrated the validity of the Heisenberg Uncertainty Principle. The results confirmed the inverse relationship between position and momentum uncertainties, with their product consistently satisfying the lower bound of ħ/2. Furthermore, the time evolution simulation highlighted the natural spreading of Gaussian wave packets, reinforcing their role as minimum-uncertainty states in quantum mechanics.  
+
+This study is intentionally minimal and pedagogical: the reproducible Python code provides a lightweight yet precise tool for teaching and exploring quantum mechanics. While the focus here was on the Heisenberg relation, the methodology can be extended to investigate more complex quantum systems and educational demonstrations.
+
+
