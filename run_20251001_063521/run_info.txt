@@ -1,0 +1,5 @@
+Heisenberg Uncertainty Minimal Simulation (Colab-ready)
+RUN_ID: 20251001_063521
+BASE_DIR: /content/drive/MyDrive/Heisenberg_Sims
+OUTDIR: /content/drive/MyDrive/Heisenberg_Sims/run_20251001_063521
+Python: 3.12.11
