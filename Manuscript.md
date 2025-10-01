@@ -36,7 +36,7 @@ To visualize the structure of the wave packets, Figures 2 and 3 show the probabi
 The simulation was also extended to investigate the free time evolution of the wave packet (Figure 4). During this process, the position uncertainty, $Δx(t)$, monotonically increases over time. This phenomenon is known as "wave packet spreading" and arises because the different plane wave components making up the wave packet propagate at different velocities. It is important to note that since no external force acts on the particle, its momentum distribution—and thus its momentum uncertainty $Δp$—remains constant in time.
 
 ![Time evolution of the position uncertainty.](uploaded:free_spreading_sigma_x_t.png)
-*Figure 4: The change in position uncertainty $Δx(t)$ over time for a freely propagating Gaussian wave packet. The wave packet spreads out in time, resulting in an increase in $Δx$.*
+Figure 4: The change in position uncertainty $Δx(t)$ over time for a freely propagating Gaussian wave packet. The wave packet spreads out in time, resulting in an increase in $Δx$.
 
 ---
 
