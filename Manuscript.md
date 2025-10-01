@@ -11,7 +11,7 @@ In the simulation, we examined the behavior of quantum mechanical wave packets i
 The `heisenberg_scan.csv` dataset and the `uncertainty_product.png` plot generated from it clearly demonstrate the inverse relationship between position uncertainty ($Δx$) and momentum uncertainty ($Δp$). As we increased the standard deviation of the initial wave packet in position space, i.e., the value of $Δx$, the measured standard deviation in momentum representation, $Δp$, decreased accordingly. This behavior stems from the fundamental property of the Fourier transform, which connects the position and momentum space representations.
 
 ![The uncertainty product as a function of the initial position's standard deviation.](uploaded:uncertainty_product.png)
-*Figure 1: The value of the product $ Δx·Δp $ as a function of the initial position's standard deviation, $σ_x$. The product is constant and approximately 0.5, which, in atomic units (where $ħ=1$), corresponds to the theoretical minimum of $ħ/2$ .*
+**Figure 1**: The value of the product $Δx·Δp$ as a function of the initial position's standard deviation, $σ_x$. The product is constant and approximately 0.5, which, in atomic units (where $ħ=1$), corresponds to the theoretical minimum of $ħ/2$ .
 
 The most significant result is that the product of these two quantities, $Δx·Δp$, remained constant across the investigated range. Based on Figure 1 and the `heisenberg_scan.csv` data, the value of the product consistently hovers around $0.5$. In an atomic unit system ($ħ=1$), this corresponds precisely to the minimum value allowed by the Heisenberg relation, $Δx·Δp ≥ ħ/2$.
 
@@ -23,13 +23,13 @@ To visualize the structure of the wave packets, Figures 2 and 3 show the probabi
 ![Position probability density distribution.](uploaded:position_density_sigma3.0.png) 
 </center>
 
-*Figure 2: The probability density of the wave packet in position space ($|\psi(x)|^2$) for an initial state with a standard deviation of $σ_x = 3.0$.*
+**Figure 2**: The probability density of the wave packet in position space ($|\psi(x)|^2$) for an initial state with a standard deviation of $σ_x = 3.0$.
 
 <center>
 ![Momentum probability density distribution.](uploaded:momentum_density_sigma3.0.png) 
 </center>
 
-*Figure 3: The probability density of the wave packet in momentum space ($|\phi(p)|^2$) for an initial state with a standard deviation of $σ_x = 3.0$.*
+**Figure 3**: The probability density of the wave packet in momentum space ($|\phi(p)|^2$) for an initial state with a standard deviation of $σ_x = 3.0$
 
 **3. Time Evolution of the Wave Packet**
 
