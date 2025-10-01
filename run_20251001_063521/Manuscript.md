@@ -11,7 +11,8 @@ In the simulation, we examined the behavior of quantum mechanical wave packets i
 
 The `heisenberg_scan.csv` dataset and the `uncertainty_product.png` plot generated from it clearly demonstrate the inverse relationship between position uncertainty ($Δx$) and momentum uncertainty ($Δp$). As we increased the standard deviation of the initial wave packet in position space, i.e., the value of $Δx$, the measured standard deviation in momentum representation, $Δp$, decreased accordingly. This behavior stems from the fundamental property of the Fourier transform, which connects the position and momentum space representations.
 
-![Position density for σₓ = 3.0](run_20251001_063521/figs/position_density_sigma3.0.png)
+<img src="run_20251001_063521/figs/uncertainty_product.png" alt="Uncertainty product as a function of σₓ" width="800" />
+
 **Figure 1**: The value of the product $Δx·Δp$ as a function of the initial position's standard deviation, $σ_x$. The product is constant and approximately 0.5, which, in atomic units (where $ħ=1$), corresponds to the theoretical minimum of $ħ/2$ .
 
 The most significant result is that the product of these two quantities, $Δx·Δp$, remained constant across the investigated range. Based on Figure 1 and the `heisenberg_scan.csv` data, the value of the product consistently hovers around $0.5$. In an atomic unit system ($ħ=1$), this corresponds precisely to the minimum value allowed by the Heisenberg relation, $Δx·Δp ≥ ħ/2$.
@@ -20,14 +21,14 @@ The most significant result is that the product of these two quantities, $Δx·�
 
 To visualize the structure of the wave packets, Figures 2 and 3 show the probability density distributions in position and momentum space for a representative state with an initial standard deviation of $σ_x = 3.0$. Both distributions, as theoretically expected, have a Gaussian shape. A wider distribution in position space (larger $Δx$) results in a narrower distribution in momentum space (smaller $Δp$), visually confirming the inverse proportionality inherent in the uncertainty principle.
 
-<center>
-![Position probability density distribution.](uploaded:position_density_sigma3.0.png) 
-</center>
+
+<img src="run_20251001_063521/figs/position_density_sigma3.0.png" alt="Position density for σₓ = 3.0" width="800" />
+
 
 **Figure 2**: The probability density of the wave packet in position space ($|\psi(x)|^2$) for an initial state with a standard deviation of $σ_x = 3.0$.
 
 <center>
-![Momentum probability density distribution.](uploaded:momentum_density_sigma3.0.png) 
+<img src="run_20251001_063521/figs/momentum_density_sigma3.0.png" alt="Momentum density for σₓ = 3.0" width="800" />
 </center>
 
 **Figure 3**: The probability density of the wave packet in momentum space ($|\phi(p)|^2$) for an initial state with a standard deviation of $σ_x = 3.0$
@@ -36,7 +37,7 @@ To visualize the structure of the wave packets, Figures 2 and 3 show the probabi
 
 The simulation was also extended to investigate the free time evolution of the wave packet (Figure 4). During this process, the position uncertainty, $Δx(t)$, monotonically increases over time. This phenomenon is known as "wave packet spreading" and arises because the different plane wave components making up the wave packet propagate at different velocities. It is important to note that since no external force acts on the particle, its momentum distribution—and thus its momentum uncertainty $Δp$—remains constant in time.
 
-![Time evolution of the position uncertainty.](uploaded:free_spreading_sigma_x_t.png)
+<img src="run_20251001_063521/figs/free_spreading_sigma_x_t.png" alt="Free spreading of a Gaussian wave packet" width="800" />
 Figure 4: The change in position uncertainty $Δx(t)$ over time for a freely propagating Gaussian wave packet. The wave packet spreads out in time, resulting in an increase in $Δx$.
 
 ---
