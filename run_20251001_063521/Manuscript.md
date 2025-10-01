@@ -22,13 +22,13 @@ The most significant result is that the product of these two quantities, $Δx·�
 To visualize the structure of the wave packets, Figures 2 and 3 show the probability density distributions in position and momentum space for a representative state with an initial standard deviation of $σ_x = 3.0$. Both distributions, as theoretically expected, have a Gaussian shape. A wider distribution in position space (larger $Δx$) results in a narrower distribution in momentum space (smaller $Δp$), visually confirming the inverse proportionality inherent in the uncertainty principle.
 
 
-<img src="Heisenberg_Uncertainty_Simulation/run_20251001_063521/figs/position_density_sigma3.0.png" alt="Position density for σₓ = 3.0" width="800" />
+<img src="figs/position_density_sigma3.0.png" alt="Position density for σₓ = 3.0" width="800" />
 
 
 **Figure 2**: The probability density of the wave packet in position space ($|\psi(x)|^2$) for an initial state with a standard deviation of $σ_x = 3.0$.
 
 <center>
-<img src="Heisenberg_Uncertainty_Simulation/run_20251001_063521/figs/momentum_density_sigma3.0.png" alt="Momentum density for σₓ = 3.0" width="800" />
+<img src="figs/momentum_density_sigma3.0.png" alt="Momentum density for σₓ = 3.0" width="800" />
 </center>
 
 **Figure 3**: The probability density of the wave packet in momentum space ($|\phi(p)|^2$) for an initial state with a standard deviation of $σ_x = 3.0$
@@ -37,7 +37,7 @@ To visualize the structure of the wave packets, Figures 2 and 3 show the probabi
 
 The simulation was also extended to investigate the free time evolution of the wave packet (Figure 4). During this process, the position uncertainty, $Δx(t)$, monotonically increases over time. This phenomenon is known as "wave packet spreading" and arises because the different plane wave components making up the wave packet propagate at different velocities. It is important to note that since no external force acts on the particle, its momentum distribution—and thus its momentum uncertainty $Δp$—remains constant in time.
 
-<img src="Heisenberg_Uncertainty_Simulation/run_20251001_063521/figs/free_spreading_sigma_x_t.png" alt="Free spreading of a Gaussian wave packet" width="800" />
+<img src="figs/free_spreading_sigma_x_t.png" alt="Free spreading of a Gaussian wave packet" width="800" />
 Figure 4: The change in position uncertainty $Δx(t)$ over time for a freely propagating Gaussian wave packet. The wave packet spreads out in time, resulting in an increase in $Δx$.
 
 ---
