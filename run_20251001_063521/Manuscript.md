@@ -9,7 +9,7 @@ This chapter presents the results of a numerical simulation of Gaussian wave pac
 
 We present a minimal numerical demonstration of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. By systematically varying the initial position spread, we numerically verify the reciprocal relationship between position and momentum uncertainties and confirm that their product remains bounded by the theoretical minimum of $ħ/2$. In addition, we simulate the free time evolution of the wave packet, illustrating the spreading of the position uncertainty while the momentum distribution remains constant. The results highlight the role of Gaussian wave packets as minimum-uncertainty states and provide an accessible, reproducible teaching tool for quantum mechanics.
 
-### Presentation of Results
+## Presentation of Results
 
 In the simulation, we examined the behavior of quantum mechanical wave packets in one dimension. The initial states were described by Gaussian functions, the standard deviation ($σ_x$) of which was systematically varied.
 
@@ -48,7 +48,7 @@ Figure 4: The change in position uncertainty $Δx(t)$ over time for a freely pro
 
 ---
 
-### Discussion
+## Discussion
 
 The presented numerical results confirm and illustrate fundamental concepts of quantum mechanics from several perspectives.
 
