@@ -7,15 +7,16 @@ This chapter presents the results of a numerical simulation of Gaussian wave pac
 
 ## Abstract
 
-We present a minimal numerical demonstration of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. By systematically varying the initial position spread, we numerically verify the reciprocal relationship between position and momentum uncertainties and confirm that their product remains bounded by the theoretical minimum of $ħ/2$. In addition, we simulate the free time evolution of the wave packet, illustrating the spreading of the position uncertainty while the momentum distribution remains constant. The results highlight the role of Gaussian wave packets as minimum-uncertainty states and provide an accessible, reproducible teaching tool for quantum mechanics.
+I present a minimal numerical demonstration of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. By systematically varying the initial position spread, I numerically verify the reciprocal relationship between position and momentum uncertainties and confirm that their product remains bounded by the theoretical minimum of $ħ/2$. In addition, I simulate the free time evolution of the wave packet, illustrating the spreading of the position uncertainty while the momentum distribution remains constant. The results highlight the role of Gaussian wave packets as minimum-uncertainty states and provide an accessible, reproducible teaching tool for quantum mechanics.
 
 ## Presentation of Results
 
-In the simulation, we examined the behavior of quantum mechanical wave packets in one dimension. The initial states were described by Gaussian functions, the standard deviation ($σ_x$) of which was systematically varied.
+In the simulation, I examined the behavior of quantum mechanical wave packets in one dimension. The initial states were described by Gaussian functions, the standard deviation ($σ_x$) of which was systematically varied.
+
 
 **1. The Relationship Between Position and Momentum Uncertainty**
 
-The `heisenberg_scan.csv` dataset and the `uncertainty_product.png` plot generated from it clearly demonstrate the inverse relationship between position uncertainty ($Δx$) and momentum uncertainty ($Δp$). As we increased the standard deviation of the initial wave packet in position space, i.e., the value of $Δx$, the measured standard deviation in momentum representation, $Δp$, decreased accordingly. This behavior stems from the fundamental property of the Fourier transform, which connects the position and momentum space representations.
+The `heisenberg_scan.csv` dataset and the `uncertainty_product.png` plot generated from it clearly demonstrate the inverse relationship between position uncertainty ($Δx$) and momentum uncertainty ($Δp$). As I increased the standard deviation of the initial wave packet in position space, i.e., the value of $Δx$, the measured standard deviation in momentum representation, $Δp$, decreased accordingly. This behavior stems from the fundamental property of the Fourier transform, which connects the position and momentum space representations.
 
 <img src="figs/uncertainty_product.png" alt="Uncertainty product as a function of σₓ" width="800" />
 
@@ -26,7 +27,6 @@ The most significant result is that the product of these two quantities, $Δx·�
 **2. Wave Packet Density Distributions**
 
 To visualize the structure of the wave packets, Figures 2 and 3 show the probability density distributions in position and momentum space for a representative state with an initial standard deviation of $σ_x = 3.0$. Both distributions, as theoretically expected, have a Gaussian shape. A wider distribution in position space (larger $Δx$) results in a narrower distribution in momentum space (smaller $Δp$), visually confirming the inverse proportionality inherent in the uncertainty principle.
-
 
 <img src="figs/position_density_sigma3.0.png" alt="Position density for σₓ = 3.0" width="800" />
 
@@ -56,7 +56,7 @@ The presented numerical results confirm and illustrate fundamental concepts of q
 The simulation clearly and quantitatively validates the Heisenberg uncertainty principle ($Δx·Δp ≥ ħ/2$). The data shows that an unavoidable, inverse relationship exists between the uncertainties of these two physical quantities. Their product never falls below the theoretical limit of $ħ/2$, which is an inherent property of quantum systems.
 
 **The Gaussian Wave Packet as a Minimum Uncertainty State**
-Our results highlight the special role that Gaussian wave packets play in quantum mechanics. The fact that their uncertainty product $Δx·Δp$ assumes the minimum possible value, $ħ/2$, means that these states are **minimum uncertainty wave packets**. In other words, a Gaussian wave packet describes the "most classical-like" state possible, where a particle's position and momentum are simultaneously defined with the highest possible precision.
+My results highlight the special role that Gaussian wave packets play in quantum mechanics. The fact that their uncertainty product $Δx·Δp$ assumes the minimum possible value, $ħ/2$, means that these states are **minimum uncertainty wave packets**. In other words, a Gaussian wave packet describes the "most classical-like" state possible, where a particle's position and momentum are simultaneously defined with the highest possible precision.
 
 **Time Evolution of Uncertainty**
 The study of time evolution shows that although the position uncertainty ($Δx(t)$) increases during free evolution, the momentum uncertainty ($Δp$) remains constant. Consequently, the uncertainty product, $Δx(t)·Δp$, also increases over time. This is in perfect agreement with the Heisenberg relation, as the product continues to satisfy the inequality $Δx(t)·Δp ≥ ħ/2$; it simply moves away from the minimum value as time progresses.
@@ -66,8 +66,6 @@ Finally, this simulation possesses outstanding educational and demonstrative val
 
 ## Conclusion
 
-Through a simple but rigorous numerical experiment, we have demonstrated the validity of the Heisenberg Uncertainty Principle. The results confirmed the inverse relationship between position and momentum uncertainties, with their product consistently satisfying the lower bound of ħ/2. Furthermore, the time evolution simulation highlighted the natural spreading of Gaussian wave packets, reinforcing their role as minimum-uncertainty states in quantum mechanics.  
+Through a simple but rigorous numerical experiment, I have demonstrated the validity of the Heisenberg Uncertainty Principle. The results confirmed the inverse relationship between position and momentum uncertainties, with their product consistently satisfying the lower bound of ħ/2. Furthermore, the time evolution simulation highlighted the natural spreading of Gaussian wave packets, reinforcing their role as minimum-uncertainty states in quantum mechanics.  
 
 This study is intentionally minimal and pedagogical: the reproducible Python code provides a lightweight yet precise tool for teaching and exploring quantum mechanics. While the focus here was on the Heisenberg relation, the methodology can be extended to investigate more complex quantum systems and educational demonstrations.
-
-
