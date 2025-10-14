@@ -2,8 +2,9 @@ SPDX-License-Identifier: MIT
 
 Copyright (c) 2025 Stefan Len
 
-[![CI](https://github.com/SteviLen420/TQE_simulation/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/SteviLen420/TQE_simulation/actions/workflows/ci.yml)  
-[![Python](https://img.shields.io/badge/python-3.9%20|%203.10%20|%203.11-blue)](https://www.python.org/doc/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![arXiv](https://img.shields.io/badge/arXiv-physics.comp--ph-b31b1b.svg)](https://arxiv.org/)
 
 # Heisenberg Uncertainty — Minimal Simulation
 
