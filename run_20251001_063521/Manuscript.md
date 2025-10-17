@@ -1,23 +1,3 @@
----
-title: "Numerical Demonstration of the Heisenberg Uncertainty Principle using Gaussian Wave Packets"
-author: "Stefan Len"
-date: "October 15, 2025"
-geometry: margin=1in
-fontsize: 11pt
-documentclass: article
-header-includes:
-  - \usepackage{amsmath}
-  - \usepackage{amssymb}
-  - \usepackage{unicode-math}
-  - \usepackage{graphicx}
----
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({ 
-    tex2jax: {inlineMath: [['$', '$']], displayMath: [['$$','$$']]},
-    "HTML-CSS": { scale: 100, linebreaks: { automatic: true } }
-  });
-</script>
 
 
 # Numerical Demonstration of the Heisenberg Uncertainty Principle using Gaussian Wave Packets
