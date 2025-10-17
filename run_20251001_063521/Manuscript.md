@@ -1,5 +1,3 @@
-
-
 # Numerical Demonstration of the Heisenberg Uncertainty Principle using Gaussian Wave Packets
 
 **Stefan Len**
@@ -12,7 +10,7 @@
 
 ## Abstract
 
-We present a minimal numerical demonstration of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. By systematically varying the initial position spread, we numerically verify the reciprocal relationship between position and momentum uncertainties and confirm that their product remains bounded by the theoretical minimum of ℏ/2. In addition, we simulate the free time evolution of the wave packet, illustrating the spreading of the position uncertainty while the momentum distribution remains constant. The results highlight the role of Gaussian wave packets as minimum-uncertainty states and provide an accessible, reproducible teaching tool for quantum mechanics.
+I present a minimal numerical demonstration of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. By systematically varying the initial position spread, I numerically verify the reciprocal relationship between position and momentum uncertainties and confirm that their product remains bounded by the theoretical minimum of ℏ/2. In addition, I simulate the free time evolution of the wave packet, illustrating the spreading of the position uncertainty while the momentum distribution remains constant. The results highlight the role of Gaussian wave packets as minimum-uncertainty states and provide an accessible, reproducible teaching tool for quantum mechanics.
 
 **Keywords:** Heisenberg uncertainty principle, Gaussian wave packet, quantum mechanics, minimum uncertainty state, numerical simulation, pedagogical tool
 
@@ -84,7 +82,7 @@ A Gaussian wave packet centered at position x₀ with mean momentum p₀ has the
 
 $$\psi(x,0) = \left(\frac{1}{2\pi\sigma_x^2}\right)^{1/4} \exp\left[-\frac{(x-x_0)^2}{4\sigma_x^2} + \frac{ip_0(x-x_0)}{\hbar}\right]$$
 
-where σₓ is the initial position spread. For our simulations, we set x₀ = 0 and p₀ = 0 (particle at rest at the origin):
+where σₓ is the initial position spread. For my simulations, I set x₀ = 0 and p₀ = 0 (particle at rest at the origin):
 
 $$\psi(x,0) = \left(\frac{1}{2\pi\sigma_x^2}\right)^{1/4} \exp\left[-\frac{x^2}{4\sigma_x^2}\right]$$
 
@@ -168,7 +166,7 @@ increasing with time but always satisfying the uncertainty relation.
 
 #### 2.5.1 Spatial Discretization
 
-We discretize position space on a uniform grid with N = 16384 points:
+I discretize position space on a uniform grid with N = 16384 points:
 
 $$x_j = -\frac{L}{2} + j\Delta x, \quad j = 0,1,\ldots,N-1$$
 
@@ -324,7 +322,7 @@ Finally, this simulation possesses outstanding educational and demonstrative val
 
 ## 5. Conclusions
 
-Through a simple but rigorous numerical experiment, we have demonstrated the validity of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. The key findings of this study are:
+Through a simple but rigorous numerical experiment, I have demonstrated the validity of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. The key findings of this study are:
 
 1. **Quantitative verification**: The uncertainty product Δx·Δp consistently equals ℏ/2 (0.5 in atomic units) across all initial conditions, confirming that Gaussian wave packets saturate the Heisenberg bound and achieve minimum uncertainty.
 
