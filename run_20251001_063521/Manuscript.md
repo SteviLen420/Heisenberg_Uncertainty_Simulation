@@ -443,7 +443,7 @@ All simulation data, including:
 - High-resolution figures (PNG, 300 DPI)
 - Simulation metadata (`run_info.txt`)
 
-are archived with DOI: [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.17356922) and available at the associated GitHub repository.
+are archived with DOI: [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.17390177) and available at the associated GitHub repository.
 
 ---
 
@@ -451,7 +451,7 @@ are archived with DOI: [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.
 **Word Count:** ~5,400  
 **Figures:** 4  
 **Code Availability:** GitHub [repository URL](https://github.com/SteviLen420/Heisenberg_Uncertainty_Simulation)  
-**Data Availability:** Zenodo DOI [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.17356922)
+**Data Availability:** Zenodo DOI [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.17390177)
 
 ---
 
