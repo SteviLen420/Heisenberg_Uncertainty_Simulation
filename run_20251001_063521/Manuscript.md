@@ -10,7 +10,7 @@
 
 ## Abstract
 
-I present a minimal numerical demonstration of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. By systematically varying the initial position spread, I numerically verify the reciprocal relationship between position and momentum uncertainties and confirm that their product remains bounded by the theoretical minimum of ℏ/2. In addition, I simulate the free time evolution of the wave packet, illustrating the spreading of the position uncertainty while the momentum distribution remains constant. The results highlight the role of Gaussian wave packets as minimum-uncertainty states and provide an accessible, reproducible teaching tool for quantum mechanics.
+I present a minimal numerical demonstration of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. By systematically varying the initial position spread, I numerically verify the reciprocal relationship between position and momentum uncertainties and confirm that their product at the initial time achieves the theoretical minimum of ℏ/2. In addition, I simulate the free time evolution of the wave packet, illustrating the spreading of the position uncertainty while the momentum distribution remains constant. The results highlight the role of Gaussian wave packets as minimum-uncertainty states at the initial moment and provide an accessible, reproducible teaching tool for quantum mechanics.
 
 **Keywords:** Heisenberg uncertainty principle, Gaussian wave packet, quantum mechanics, minimum uncertainty state, numerical simulation, pedagogical tool
 
@@ -26,13 +26,13 @@ $$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$$
 
 where Δx and Δp are the standard deviations (uncertainties) of position and momentum, respectively, and ℏ is the reduced Planck constant. This inequality is not a statement about experimental limitations or measurement disturbance, but rather reflects a fundamental property inherent in the mathematical structure of quantum mechanics itself.
 
-### 1.2 Gaussian Wave Packets as Optimal States
+### 1.2 Gaussian Wave Packets as Minimum-Uncertainty States
 
-Among all possible quantum states, Gaussian wave packets occupy a privileged position: they saturate the uncertainty bound, achieving equality in the Heisenberg relation [2]. For a Gaussian state:
+Among all possible quantum states, Gaussian wave packets occupy a privileged position: they saturate the uncertainty bound at the initial time, achieving equality in the Heisenberg relation [2]. For a Gaussian state at t=0:
 
 $$\Delta x \cdot \Delta p = \frac{\hbar}{2}$$
 
-This property designates Gaussian wave packets as minimum-uncertainty states or coherent states, representing the closest quantum analog to classical particles. Their dual nature—exhibiting optimal localization in both position and momentum space simultaneously—makes them ideal subjects for both theoretical analysis and pedagogical demonstration.
+This property designates Gaussian wave packets as minimum-uncertainty states at the initial moment, representing the closest quantum analog to classical particles in their simultaneous localization in both position and momentum space. While related to harmonic oscillator coherent states in their minimum-uncertainty property, free-space Gaussian packets do not maintain this property under time evolution and should not be conflated with coherent states in the strict sense [7]. Their dual nature—exhibiting optimal localization in both position and momentum space at t=0—makes them ideal subjects for both theoretical analysis and pedagogical demonstration.
 
 ### 1.3 Computational Approach and Objectives
 
@@ -41,10 +41,10 @@ Numerical simulations provide direct, visual validation of abstract quantum mech
 1. Construct Gaussian wave packets with systematically varied position spreads
 2. Compute momentum distributions via discrete Fourier transformation
 3. Quantify position and momentum uncertainties numerically
-4. Verify the Heisenberg uncertainty relation across parameter space
+4. Verify the Heisenberg uncertainty relation at the initial time across parameter space
 5. Simulate free time evolution to demonstrate wave packet spreading
 
-The primary objectives are to provide quantitative numerical verification of the uncertainty principle, to illustrate the reciprocal relationship between conjugate uncertainties, and to offer a reproducible computational tool suitable for educational purposes in quantum mechanics courses.
+The primary objectives are to provide quantitative numerical verification of the uncertainty principle at the initial time, to illustrate the reciprocal relationship between conjugate uncertainties, and to offer a reproducible computational tool suitable for educational purposes in quantum mechanics courses.
 
 ---
 
@@ -128,39 +128,57 @@ $$\langle p^2 \rangle = \int_{-\infty}^{\infty} p^2|\Psi(p)|^2 dp$$
 
 For the Gaussian momentum distribution, Δp = ℏ/(2σₓ).
 
-#### 2.3.3 Uncertainty Product
+#### 2.3.3 Uncertainty Product at Initial Time
 
-Combining these results:
+Combining these results for t=0:
 
 $$\Delta x \cdot \Delta p = \sigma_x \cdot \frac{\hbar}{2\sigma_x} = \frac{\hbar}{2}$$
 
-This confirms analytically that Gaussian wave packets achieve the minimum uncertainty bound.
+This confirms analytically that Gaussian wave packets achieve the minimum uncertainty bound at the initial time.
+
+#### 2.3.4 The Generalized Uncertainty Relation
+
+The standard Heisenberg relation Δx·Δp ≥ ℏ/2 is actually a special case of the more general Schrödinger–Robertson uncertainty relation [3]:
+
+$$\Delta x \cdot \Delta p \geq \sqrt{\left(\frac{\hbar}{2}\right)^2 + |\text{Cov}(x,p)|^2}$$
+
+where the covariance is defined as:
+
+$$\text{Cov}(x,p) = \frac{1}{2}\langle \hat{x}\hat{p} + \hat{p}\hat{x} \rangle - \langle \hat{x} \rangle \langle \hat{p} \rangle$$
+
+For a Gaussian wave packet at t=0 with zero mean momentum (p₀=0), Cov(x,p)=0 and the product saturates the minimal bound: Δx·Δp = ℏ/2.
+
+**Time evolution:** During free propagation, the momentum-position correlation develops (Cov(x,p) ≠ 0 for t>0), causing the uncertainty product to exceed ℏ/2 even though the wavefunction remains Gaussian. The numerical simulation presented here focuses on the initial (t=0) minimum-uncertainty configuration.
 
 ### 2.4 Time Evolution
 
 #### 2.4.1 Free Particle Dynamics
 
-For a free particle (no external potential), the time-evolved wave function can be obtained exactly. The position uncertainty evolves as:
+For a free particle (no external potential), the time-evolved wave function can be obtained exactly. **For an initially minimum-uncertainty Gaussian wave packet with σₓ(0) and zero initial momentum (p₀=0)**, the position uncertainty evolves as:
 
 $$\sigma_x(t) = \sigma_x(0)\sqrt{1 + \left(\frac{\hbar t}{2m\sigma_x^2(0)}\right)^2}$$
 
-where m is the particle mass. This demonstrates that position uncertainty grows monotonically with time—a phenomenon known as wave packet spreading.
+where m is the particle mass. This formula applies specifically to our initial conditions; more general initial states would exhibit different spreading behavior depending on their initial phase-space structure. This demonstrates that position uncertainty grows monotonically with time—a phenomenon known as wave packet spreading.
 
 #### 2.4.2 Momentum Conservation
 
-Crucially, the momentum distribution remains unchanged during free evolution:
+Crucially, the momentum-space **probability density** remains unchanged during free evolution:
 
-$$\Psi(p,t) = \Psi(p,0)$$
+$$|\Psi(p,t)|^2 = |\Psi(p,0)|^2$$
 
-Therefore:
+However, the momentum-space wavefunction itself acquires a time-dependent phase:
+
+$$\Psi(p,t) = \Psi(p,0) \cdot \exp\left(-i\frac{p^2 t}{2m\hbar}\right)$$
+
+This phase evolution, while not affecting ⟨p⟩ or Δp, is physically significant for interference phenomena and wave packet reconstruction. Therefore:
 
 $$\Delta p(t) = \Delta p(0) = \text{constant}$$
 
 The uncertainty product thus evolves as:
 
-$$\Delta x(t) \cdot \Delta p = \sigma_x(t) \cdot \frac{\hbar}{2\sigma_x(0)} \geq \frac{\hbar}{2}$$
+$$\Delta x(t) \cdot \Delta p = \sigma_x(t) \cdot \frac{\hbar}{2\sigma_x(0)} > \frac{\hbar}{2} \quad \text{for } t>0$$
 
-increasing with time but always satisfying the uncertainty relation.
+Note that for t>0, the product **strictly exceeds** ℏ/2 because x-p correlations develop during free evolution. The minimum-uncertainty property (Δx·Δp = ℏ/2) holds only at t=0 for our initial Gaussian state. The general Schrödinger–Robertson relation remains satisfied throughout.
 
 ### 2.5 Numerical Implementation
 
@@ -258,10 +276,6 @@ To ensure numerical reliability:
 
 ## 4. Results and Discussion
 
-**Author**: Stefan Len
-
-(run_20251001_063521)
-
 This chapter presents the results of a numerical simulation of Gaussian wave packets, with a particular focus on the quantitative and qualitative verification of the Heisenberg uncertainty principle. The analysis covers the investigation of initial states, the behavior of the uncertainty product, and the time evolution of the system.
 
 In the simulation, I examined the behavior of quantum mechanical wave packets in one dimension. The initial states were described by Gaussian functions, the standard deviation (σₓ) of which was systematically varied.
@@ -274,7 +288,7 @@ The `heisenberg_scan.csv` dataset and the `uncertainty_product.png` plot generat
 
 **Figure 1**: The value of the product Δx·Δp as a function of the initial position's standard deviation, σₓ. The product is constant and approximately 0.5, which, in atomic units (where ℏ=1), corresponds to the theoretical minimum of ℏ/2.
 
-The most significant result is that the product of these two quantities, Δx·Δp, remained constant across the investigated range. Based on Figure 1 and the `heisenberg_scan.csv` data, the value of the product consistently hovers around 0.5. In an atomic unit system (ℏ=1), this corresponds precisely to the minimum value allowed by the Heisenberg relation, Δx·Δp ≥ ℏ/2.
+The most significant result is that the product of these two quantities, Δx·Δp, remained constant across the investigated range at t=0. Based on Figure 1 and the `heisenberg_scan.csv` data, the value of the product consistently hovers around 0.5. In an atomic unit system (ℏ=1), this corresponds precisely to the minimum value allowed by the Heisenberg relation, Δx·Δp ≥ ℏ/2, at the initial time.
 
 **2. Wave Packet Density Distributions**
 
@@ -290,7 +304,7 @@ To visualize the structure of the wave packets, Figures 2 and 3 show the probabi
 
 **3. Time Evolution of the Wave Packet**
 
-The simulation was also extended to investigate the free time evolution of the wave packet (Figure 4). During this process, the position uncertainty, Δx(t), monotonically increases over time. This phenomenon is known as "wave packet spreading" and arises because the different plane wave components making up the wave packet propagate at different velocities. It is important to note that since no external force acts on the particle, its momentum distribution—and thus its momentum uncertainty Δp—remains constant in time.
+The simulation was also extended to investigate the free time evolution of the wave packet (Figure 4). During this process, the position uncertainty, Δx(t), monotonically increases over time. This phenomenon is known as "wave packet spreading" and arises because the different plane wave components making up the wave packet propagate at different velocities. It is important to note that since no external force acts on the particle, its momentum distribution—and thus its momentum uncertainty Δp—remains constant in time. As a consequence, the uncertainty product Δx(t)·Δp exceeds the minimum value ℏ/2 for t>0 due to the development of position-momentum correlations.
 
 ![Free Spreading](figs/free_spreading_sigma_x_t.png)
 
@@ -304,15 +318,15 @@ The presented numerical results confirm and illustrate fundamental concepts of q
 
 **Numerical Verification of the Heisenberg Uncertainty Principle**
 
-The simulation clearly and quantitatively validates the Heisenberg uncertainty principle (Δx·Δp ≥ ℏ/2). The data shows that an unavoidable, inverse relationship exists between the uncertainties of these two physical quantities. Their product never falls below the theoretical limit of ℏ/2, which is an inherent property of quantum systems.
+The simulation clearly and quantitatively validates the Heisenberg uncertainty principle (Δx·Δp ≥ ℏ/2) at the initial time. The data shows that an unavoidable, inverse relationship exists between the uncertainties of these two physical quantities. Their product at t=0 achieves the theoretical limit of ℏ/2, which is the defining property of minimum-uncertainty states.
 
 **The Gaussian Wave Packet as a Minimum Uncertainty State**
 
-My results highlight the special role that Gaussian wave packets play in quantum mechanics. The fact that their uncertainty product Δx·Δp assumes the minimum possible value, ℏ/2, means that these states are **minimum uncertainty wave packets**. In other words, a Gaussian wave packet describes the "most classical-like" state possible, where a particle's position and momentum are simultaneously defined with the highest possible precision.
+My results highlight the special role that Gaussian wave packets play in quantum mechanics at the initial moment. The fact that their uncertainty product Δx·Δp assumes the minimum possible value, ℏ/2, at t=0 means that these states are **minimum-uncertainty wave packets** at that instant. In other words, a Gaussian wave packet at t=0 describes the "most classical-like" state possible, where a particle's position and momentum are simultaneously defined with the highest possible precision allowed by quantum mechanics.
 
-**Time Evolution of Uncertainty**
+**Time Evolution of Uncertainty and Correlation Development**
 
-The study of time evolution shows that although the position uncertainty (Δx(t)) increases during free evolution, the momentum uncertainty (Δp) remains constant. Consequently, the uncertainty product, Δx(t)·Δp, also increases over time. This is in perfect agreement with the Heisenberg relation, as the product continues to satisfy the inequality Δx(t)·Δp ≥ ℏ/2; it simply moves away from the minimum value as time progresses.
+The study of time evolution shows that although the position uncertainty (Δx(t)) increases during free evolution, the momentum uncertainty (Δp) remains constant. Consequently, the uncertainty product, Δx(t)·Δp, also increases over time and strictly exceeds ℏ/2 for t>0. This is in perfect agreement with the generalized Schrödinger–Robertson relation, as position-momentum correlations develop during free propagation. The minimum-uncertainty property is thus a feature of the initial state only, not preserved during free evolution.
 
 **Educational and Illustrative Value**
 
@@ -324,21 +338,21 @@ Finally, this simulation possesses outstanding educational and demonstrative val
 
 Through a simple but rigorous numerical experiment, I have demonstrated the validity of the Heisenberg Uncertainty Principle using Gaussian wave packets in one spatial dimension. The key findings of this study are:
 
-1. **Quantitative verification**: The uncertainty product Δx·Δp consistently equals ℏ/2 (0.5 in atomic units) across all initial conditions, confirming that Gaussian wave packets saturate the Heisenberg bound and achieve minimum uncertainty.
+1. **Quantitative verification**: The uncertainty product Δx·Δp consistently equals ℏ/2 (0.5 in atomic units) at t=0 across all initial conditions, confirming that Gaussian wave packets saturate the Heisenberg bound and achieve minimum uncertainty at the initial time.
 
 2. **Reciprocal relationship**: Position and momentum uncertainties exhibit the predicted inverse proportionality Δp = ℏ/(2Δx), demonstrated both numerically and visually through Fourier-transformed distributions.
 
-3. **Wave packet spreading**: Free time evolution shows monotonic growth of position uncertainty Δx(t) while momentum uncertainty Δp remains constant, consistent with the analytical prediction for free Gaussian packets.
+3. **Wave packet spreading**: Free time evolution shows monotonic growth of position uncertainty Δx(t) while momentum uncertainty Δp remains constant, consistent with the analytical prediction for free Gaussian packets. The uncertainty product exceeds ℏ/2 for t>0 due to correlation development.
 
-4. **Minimum uncertainty states**: The results confirm that Gaussian wave packets represent optimal quantum states, simultaneously achieving the best possible localization in both position and momentum space.
+4. **Minimum uncertainty states at initial time**: The results confirm that Gaussian wave packets represent optimal quantum states at t=0, simultaneously achieving the best possible localization in both position and momentum space at that moment.
 
-5. **Fundamental quantum limit**: The constant uncertainty product establishes the Heisenberg principle as an intrinsic property of quantum states rather than a limitation of measurement technology.
+5. **Fundamental quantum limit**: The constant uncertainty product at the initial time establishes the Heisenberg principle as an intrinsic property of quantum states rather than a limitation of measurement technology.
 
 This work demonstrates that straightforward numerical simulations can provide rigorous validation of fundamental quantum mechanical principles. The methodology presented here—combining analytical theory, FFT-based computation, and systematic parameter variation—offers a template for exploring quantum mechanics in educational settings.
 
 The reproducible Python code and clear visualizations make this study a valuable pedagogical resource. Students and researchers can directly explore one of quantum mechanics' most profound principles, observing the wave-particle duality and complementarity that lie at the heart of the quantum world. The minimal complexity of the implementation (using only standard NumPy and Matplotlib libraries) ensures accessibility while maintaining scientific rigor.
 
-Future extensions of this framework could investigate non-Gaussian wave packets, explore the effects of external potentials on uncertainty evolution, or examine multi-dimensional systems and angular momentum uncertainties. The split-operator time evolution algorithm demonstrated here can be readily adapted to more complex Hamiltonians, providing a versatile tool for computational quantum mechanics.
+Future extensions of this framework could investigate non-Gaussian wave packets, explore the effects of external potentials on uncertainty evolution, examine the role of position-momentum correlations in more detail, or study multi-dimensional systems and angular momentum uncertainties. The split-operator time evolution algorithm demonstrated here can be readily adapted to more complex Hamiltonians, providing a versatile tool for computational quantum mechanics.
 
 ---
 
@@ -361,6 +375,8 @@ The author thanks the open-source scientific Python community (NumPy, Matplotlib
 [5] Sakurai, J. J., & Napolitano, J. (2017). *Modern Quantum Mechanics* (2nd ed.). Cambridge University Press.
 
 [6] Cohen-Tannoudji, C., Diu, B., & Laloë, F. (2019). *Quantum Mechanics, Volume 1: Basic Concepts, Tools, and Applications* (2nd ed.). Wiley-VCH.
+
+[7] Glauber, R. J. (1963). Coherent and incoherent states of the radiation field. *Physical Review*, 131(6), 2766.
 
 ---
 
@@ -447,8 +463,8 @@ are archived with DOI: [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.
 
 ---
 
-**Manuscript Version:** 1.0  
-**Word Count:** ~5,400  
+**Manuscript Version:** 2.0 (Revised)  
+**Word Count:** ~5,600  
 **Figures:** 4  
 **Code Availability:** GitHub [repository URL](https://github.com/SteviLen420/Heisenberg_Uncertainty_Simulation)  
 **Data Availability:** Zenodo DOI [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.17390177)
