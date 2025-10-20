@@ -4,7 +4,7 @@
 
 *Independent Researcher*
 
-**Date:** October 15, 2025
+**Date:** October 20, 2025
 
 ---
 
@@ -474,4 +474,4 @@ are archived with DOI: [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.
 *Correspondence:* Stefan Len, tqe.simulation@gmail.com, [GitHub: @SteviLen420](https://github.com/SteviLen420/Heisenberg_Uncertainty_Simulation)
 
 *Submitted to:* arXiv [quant-ph] or [physics.ed-ph]  
-*Date:* October 15, 2025
+*Date:* October 20, 2025
