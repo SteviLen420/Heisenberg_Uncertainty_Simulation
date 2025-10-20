@@ -466,12 +466,12 @@ are archived with DOI: [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.
 **Manuscript Version:** 2.0 (Revised)  
 **Word Count:** ~5,600  
 **Figures:** 4  
-**Code Availability:** GitHub [repository URL](https://github.com/SteviLen420/Heisenberg_Uncertainty_Simulation)  
+**Code Availability:** GitHub [repository URL](https://github.com/SteviLen420/Heisenberg_Uncertainty_Simulation/tree/main/Heisenberg_Uncertainty_pipeline)  
 **Data Availability:** Zenodo DOI [10.5281/zenodo.17356922](https://doi.org/10.5281/zenodo.17390177)
 
 ---
 
-*Correspondence:* Stefan Len, tqe.simulation@gmail.com, [GitHub: @SteviLen420]
+*Correspondence:* Stefan Len, tqe.simulation@gmail.com, [GitHub: @SteviLen420](https://github.com/SteviLen420/Heisenberg_Uncertainty_Simulation)
 
 *Submitted to:* arXiv [quant-ph] or [physics.ed-ph]  
 *Date:* October 15, 2025
