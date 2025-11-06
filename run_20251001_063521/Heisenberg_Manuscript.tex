@@ -113,7 +113,7 @@ Uncertainty Principle using Gaussian wave packets in one spatial
 dimension. By systematically varying the initial position spread, I
 numerically verify the reciprocal relationship between position and
 momentum uncertainties and confirm that their product at the initial
-time achieves the theoretical minimum of ℏ/2. In addition, I simulate
+time achieves the theoretical minimum of $\hbar/2$. In addition, I simulate
 the free time evolution of the wave packet, illustrating the spreading
 of the position uncertainty while the momentum distribution remains
 constant. The results highlight the role of Gaussian wave packets as
@@ -140,8 +140,8 @@ Mathematically, for position x and momentum p:
 
 \[\Delta x \cdot \Delta p \geq \frac{\hbar}{2}\]
 
-where Δx and Δp are the standard deviations (uncertainties) of position
-and momentum, respectively, and ℏ is the reduced Planck constant. This
+where $\Delta x$ and $\Delta p$ are the standard deviations (uncertainties) of position
+and momentum, respectively, and $\hbar$ is the reduced Planck constant. This
 inequality is not a statement about experimental limitations or
 measurement disturbance, but rather reflects a fundamental property
 inherent in the mathematical structure of quantum mechanics itself.
@@ -209,7 +209,7 @@ Framework}\label{quantum-mechanical-framework}
 Interpretation}\label{wave-function-and-probability-interpretation}
 
 In one-dimensional quantum mechanics, the state of a particle is
-described by a complex-valued wave function ψ(x,t) satisfying the
+described by a complex-valued wave function $\psi(x,t)$ satisfying the
 Schrödinger equation. The probability density for finding the particle
 at position x is:
 
@@ -239,13 +239,13 @@ Construction}\label{gaussian-wave-packet-construction}
 
 \paragraph{2.2.1 Initial State}\label{initial-state}
 
-A Gaussian wave packet centered at position x₀ with mean momentum p₀ has
+A Gaussian wave packet centered at position $x_0$ with mean momentum $p_0$ has
 the analytical form:
 
 \[\psi(x,0) = \left(\frac{1}{2\pi\sigma_x^2}\right)^{1/4} \exp\left[-\frac{(x-x_0)^2}{4\sigma_x^2} + \frac{ip_0(x-x_0)}{\hbar}\right]\]
 
-where σₓ is the initial position spread. For my simulations, I set x₀ =
-0 and p₀ = 0 (particle at rest at the origin):
+where $\sigma_x$ is the initial position spread. For my simulations, I set $x_0 =
+0$ and $p_0 = 0$ (particle at rest at the origin):
 
 \[\psi(x,0) = \left(\frac{1}{2\pi\sigma_x^2}\right)^{1/4} \exp\left[-\frac{x^2}{4\sigma_x^2}\right]\]
 
@@ -260,7 +260,7 @@ This is also Gaussian, with spread:
 
 \[\sigma_p = \frac{\hbar}{2\sigma_x}\]
 
-demonstrating the reciprocal relationship: as σₓ increases, σₚ decreases
+demonstrating the reciprocal relationship: as $\sigma_x$ increases, $\sigma_p$ decreases
 proportionally.
 
 \subsubsection{2.3 Uncertainty
@@ -278,7 +278,7 @@ where expectation values are computed as:
 
 \[\langle x^2 \rangle = \int_{-\infty}^{\infty} x^2|\psi(x)|^2 dx\]
 
-For a Gaussian wave packet, Δx = σₓ exactly.
+For a Gaussian wave packet, $\Delta x = \sigma_x$ exactly.
 
 \paragraph{2.3.2 Momentum Uncertainty}\label{momentum-uncertainty}
 
@@ -292,7 +292,7 @@ with:
 
 \[\langle p^2 \rangle = \int_{-\infty}^{\infty} p^2|\Psi(p)|^2 dp\]
 
-For the Gaussian momentum distribution, Δp = ℏ/(2σₓ).
+For the Gaussian momentum distribution, $\Delta p = \hbar/(2\sigma_x)$.
 
 \paragraph{2.3.3 Uncertainty Product at Initial
 Time}\label{uncertainty-product-at-initial-time}
@@ -307,7 +307,7 @@ minimum uncertainty bound at the initial time.
 \paragraph{2.3.4 The Generalized Uncertainty
 Relation}\label{the-generalized-uncertainty-relation}
 
-The standard Heisenberg relation Δx·Δp ≥ ℏ/2 is actually a special case
+The standard Heisenberg relation $\Delta x \cdot \Delta p \geq \hbar/2$ is actually a special case
 of the more general Schrödinger--Robertson uncertainty relation {[}3{]}:
 
 \[\Delta x \cdot \Delta p \geq \sqrt{\left(\frac{\hbar}{2}\right)^2 + |\text{Cov}(x,p)|^2}\]
@@ -316,12 +316,12 @@ where the covariance is defined as:
 
 \[\text{Cov}(x,p) = \frac{1}{2}\langle \hat{x}\hat{p} + \hat{p}\hat{x} \rangle - \langle \hat{x} \rangle \langle \hat{p} \rangle\]
 
-For a Gaussian wave packet at t=0 with zero mean momentum (p₀=0),
-Cov(x,p)=0 and the product saturates the minimal bound: Δx·Δp = ℏ/2.
+For a Gaussian wave packet at t=0 with zero mean momentum ($p_0=0$),
+Cov(x,p)=0 and the product saturates the minimal bound: $\Delta x \cdot \Delta p = \hbar/2$.
 
 \textbf{Time evolution:} During free propagation, the momentum-position
-correlation develops (Cov(x,p) ≠ 0 for t\textgreater0), causing the
-uncertainty product to exceed ℏ/2 even though the wavefunction remains
+correlation develops (Cov(x,p) $\neq$ 0 for $t>0$), causing the
+uncertainty product to exceed $\hbar/2$ even though the wavefunction remains
 Gaussian. The numerical simulation presented here focuses on the initial
 (t=0) minimum-uncertainty configuration.
 
@@ -331,8 +331,8 @@ Gaussian. The numerical simulation presented here focuses on the initial
 
 For a free particle (no external potential), the time-evolved wave
 function can be obtained exactly. \textbf{For an initially
-minimum-uncertainty Gaussian wave packet with σₓ(0) and zero initial
-momentum (p₀=0)}, the position uncertainty evolves as:
+minimum-uncertainty Gaussian wave packet with $\sigma_x(0)$ and zero initial
+momentum ($p_0=0$)}, the position uncertainty evolves as:
 
 \[\sigma_x(t) = \sigma_x(0)\sqrt{1 + \left(\frac{\hbar t}{2m\sigma_x^2(0)}\right)^2}\]
 
@@ -354,7 +354,7 @@ time-dependent phase:
 
 \[\Psi(p,t) = \Psi(p,0) \cdot \exp\left(-i\frac{p^2 t}{2m\hbar}\right)\]
 
-This phase evolution, while not affecting ⟨p⟩ or Δp, is physically
+This phase evolution, while not affecting $\langle p \rangle$ or $\Delta p$, is physically
 significant for interference phenomena and wave packet reconstruction.
 Therefore:
 
@@ -364,9 +364,9 @@ The uncertainty product thus evolves as:
 
 \[\Delta x(t) \cdot \Delta p = \sigma_x(t) \cdot \frac{\hbar}{2\sigma_x(0)} > \frac{\hbar}{2} \quad \text{for } t>0\]
 
-Note that for t\textgreater0, the product \textbf{strictly exceeds} ℏ/2
+Note that for $t>0$, the product \textbf{strictly exceeds} $\hbar/2$
 because x-p correlations develop during free evolution. The
-minimum-uncertainty property (Δx·Δp = ℏ/2) holds only at t=0 for our
+minimum-uncertainty property ($\Delta x \cdot \Delta p = \hbar/2$) holds only at t=0 for our
 initial Gaussian state. The general Schrödinger--Robertson relation
 remains satisfied throughout.
 
@@ -379,8 +379,8 @@ I discretize position space on a uniform grid with N = 16384 points:
 
 \[x_j = -\frac{L}{2} + j\Delta x, \quad j = 0,1,\ldots,N-1\]
 
-where L = 200 is the spatial domain size and Δx = L/N is the grid
-spacing. The wave function is sampled at these points: ψⱼ = ψ(xⱼ).
+where L = 200 is the spatial domain size and $\Delta x = L/N$ is the grid
+spacing. The wave function is sampled at these points: $\psi_j = \psi(x_j)$.
 
 \paragraph{2.5.2 Fourier Transform}\label{fourier-transform}
 
@@ -411,7 +411,7 @@ Similarly for momentum:
 
 \[\langle p^2 \rangle \approx \sum_{k=0}^{N-1} p_k^2 |\Psi_k|^2 \Delta p\]
 
-where Δp = 2πℏ/L is the momentum grid spacing.
+where $\Delta p = 2\pi\hbar/L$ is the momentum grid spacing.
 
 \paragraph{2.5.4 Time Evolution
 Algorithm}\label{time-evolution-algorithm}
@@ -427,11 +427,11 @@ For each time step dt:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Transform to momentum space: Ψ(p) = FFT{[}ψ(x){]}
+  Transform to momentum space: $\Psi(p) = \text{FFT}[\psi(x)]$
 \item
-  Apply kinetic evolution: Ψ(p) → Ψ(p) exp{[}-iKdt/(2ℏ){]}
+  Apply kinetic evolution: $\Psi(p) \to \Psi(p) \exp[-iKdt/(2\hbar)]$
 \item
-  Transform back: ψ(x) = IFFT{[}Ψ(p){]}
+  Transform back: $\psi(x) = \text{IFFT}[\Psi(p)]$
 \item
   Repeat step 2 (second half-step for second-order accuracy)
 \end{enumerate}
@@ -446,19 +446,19 @@ This algorithm is unitary and preserves norm to machine precision.
 
 The numerical simulations were conducted with the following parameters:
 
-\textbf{Grid Configuration:} - Number of points: N = 2¹⁴ = 16384 -
-Spatial domain: x ∈ {[}-100, 100{]} (atomic units) - Grid spacing: Δx ≈
-0.012 - Momentum domain: p ∈ {[}-π/Δx, π/Δx{]}
+\textbf{Grid Configuration:} - Number of points: N = $2^{14}$ = 16384 -
+Spatial domain: $x \in [-100, 100]$ (atomic units) - Grid spacing: $\Delta x \approx
+0.012$ - Momentum domain: $p \in [-\pi/\Delta x, \pi/\Delta x]$
 
-\textbf{Initial Wave Packets:} - Center position: x₀ = 0 - Center
-momentum: p₀ = 0 - Position spread range: σₓ ∈ {[}0.5, 8.0{]} - Number
-of σₓ samples: 16 (geometrically spaced)
+\textbf{Initial Wave Packets:} - Center position: $x_0 = 0$ - Center
+momentum: $p_0 = 0$ - Position spread range: $\sigma_x \in [0.5, 8.0]$ - Number
+of $\sigma_x$ samples: 16 (geometrically spaced)
 
 \textbf{Time Evolution:} - Particle mass: m = 1 (atomic units) - Time
 step: dt = 0.002 - Total evolution time: t\_max = 1.0 - Number of steps:
 500
 
-\textbf{Unit System:} - Atomic units: ℏ = 1, m = 1 - All quantities
+\textbf{Unit System:} - Atomic units: $\hbar = 1$, m = 1 - All quantities
 dimensionless
 
 \subsubsection{3.2 Numerical Accuracy}\label{numerical-accuracy}
@@ -475,7 +475,7 @@ To ensure numerical reliability:
   distributions
 \item
   Wave function normalization is verified at each step:
-  ∫\textbar ψ\textbar²dx ≈ 1.0 within 10⁻⁶
+  $\int |\psi|^2 dx \approx 1.0$ within $10^{-6}$
 \item
   Time step satisfies stability criterion for the split-operator method
 \end{itemize}
@@ -492,17 +492,17 @@ uncertainty product, and the time evolution of the system.
 
 In the simulation, I examined the behavior of quantum mechanical wave
 packets in one dimension. The initial states were described by Gaussian
-functions, the standard deviation (σₓ) of which was systematically
+functions, the standard deviation ($\sigma_x$) of which was systematically
 varied.
 
 \textbf{1. The Relationship Between Position and Momentum Uncertainty}
 
 The \texttt{heisenberg\_scan.csv} dataset and the
 \texttt{uncertainty\_product.png} plot generated from it clearly
-demonstrate the inverse relationship between position uncertainty (Δx)
-and momentum uncertainty (Δp). As I increased the standard deviation of
-the initial wave packet in position space, i.e., the value of Δx, the
-measured standard deviation in momentum representation, Δp, decreased
+demonstrate the inverse relationship between position uncertainty ($\Delta x$)
+and momentum uncertainty ($\Delta p$). As I increased the standard deviation of
+the initial wave packet in position space, i.e., the value of $\Delta x$, the
+measured standard deviation in momentum representation, $\Delta p$, decreased
 accordingly. This behavior stems from the fundamental property of the
 Fourier transform, which connects the position and momentum space
 representations.
@@ -513,26 +513,26 @@ representations.
 \caption{Uncertainty Product}
 \end{figure}
 
-\textbf{Figure 1}: The value of the product Δx·Δp as a function of the
-initial position's standard deviation, σₓ. The product is constant and
-approximately 0.5, which, in atomic units (where ℏ=1), corresponds to
-the theoretical minimum of ℏ/2.
+\textbf{Figure 1}: The value of the product $\Delta x \cdot \Delta p$ as a function of the
+initial position's standard deviation, $\sigma_x$. The product is constant and
+approximately 0.5, which, in atomic units (where $\hbar=1$), corresponds to
+the theoretical minimum of $\hbar/2$.
 
 The most significant result is that the product of these two quantities,
-Δx·Δp, remained constant across the investigated range at t=0. Based on
+$\Delta x \cdot \Delta p$, remained constant across the investigated range at t=0. Based on
 Figure 1 and the \texttt{heisenberg\_scan.csv} data, the value of the
-product consistently hovers around 0.5. In an atomic unit system (ℏ=1),
+product consistently hovers around 0.5. In an atomic unit system ($\hbar=1$),
 this corresponds precisely to the minimum value allowed by the
-Heisenberg relation, Δx·Δp ≥ ℏ/2, at the initial time.
+Heisenberg relation, $\Delta x \cdot \Delta p \geq \hbar/2$, at the initial time.
 
 \textbf{2. Wave Packet Density Distributions}
 
 To visualize the structure of the wave packets, Figures 2 and 3 show the
 probability density distributions in position and momentum space for a
-representative state with an initial standard deviation of σₓ = 3.0.
+representative state with an initial standard deviation of $\sigma_x = 3.0$.
 Both distributions, as theoretically expected, have a Gaussian shape. A
-wider distribution in position space (larger Δx) results in a narrower
-distribution in momentum space (smaller Δp), visually confirming the
+wider distribution in position space (larger $\Delta x$) results in a narrower
+distribution in momentum space (smaller $\Delta p$), visually confirming the
 inverse proportionality inherent in the uncertainty principle.
 
 \begin{figure}
@@ -542,8 +542,8 @@ inverse proportionality inherent in the uncertainty principle.
 \end{figure}
 
 \textbf{Figure 2}: The probability density of the wave packet in
-position space (\textbar ψ(x)\textbar²) for an initial state with a
-standard deviation of σₓ = 3.0.
+position space ($|\psi(x)|^2$) for an initial state with a
+standard deviation of $\sigma_x = 3.0$.
 
 \begin{figure}
 \centering
@@ -552,21 +552,21 @@ standard deviation of σₓ = 3.0.
 \end{figure}
 
 \textbf{Figure 3}: The probability density of the wave packet in
-momentum space (\textbar Ψ(p)\textbar²) for an initial state with a
-standard deviation of σₓ = 3.0.
+momentum space ($|\Psi(p)|^2$) for an initial state with a
+standard deviation of $\sigma_x = 3.0$.
 
 \textbf{3. Time Evolution of the Wave Packet}
 
 The simulation was also extended to investigate the free time evolution
 of the wave packet (Figure 4). During this process, the position
-uncertainty, Δx(t), monotonically increases over time. This phenomenon
+uncertainty, $\Delta x(t)$, monotonically increases over time. This phenomenon
 is known as ``wave packet spreading'' and arises because the different
 plane wave components making up the wave packet propagate at different
 velocities. It is important to note that since no external force acts on
 the particle, its momentum distribution---and thus its momentum
-uncertainty Δp---remains constant in time. As a consequence, the
-uncertainty product Δx(t)·Δp exceeds the minimum value ℏ/2 for
-t\textgreater0 due to the development of position-momentum correlations.
+uncertainty $\Delta p$---remains constant in time. As a consequence, the
+uncertainty product $\Delta x(t) \cdot \Delta p$ exceeds the minimum value $\hbar/2$ for
+$t>0$ due to the development of position-momentum correlations.
 
 \begin{figure}
 \centering
@@ -574,9 +574,9 @@ t\textgreater0 due to the development of position-momentum correlations.
 \caption{Free Spreading}
 \end{figure}
 
-\textbf{Figure 4}: The change in position uncertainty Δx(t) over time
+\textbf{Figure 4}: The change in position uncertainty $\Delta x(t)$ over time
 for a freely propagating Gaussian wave packet. The wave packet spreads
-out in time, resulting in an increase in Δx.
+out in time, resulting in an increase in $\Delta x$.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -588,17 +588,17 @@ concepts of quantum mechanics from several perspectives.
 \textbf{Numerical Verification of the Heisenberg Uncertainty Principle}
 
 The simulation clearly and quantitatively validates the Heisenberg
-uncertainty principle (Δx·Δp ≥ ℏ/2) at the initial time. The data shows
+uncertainty principle ($\Delta x \cdot \Delta p \geq \hbar/2$) at the initial time. The data shows
 that an unavoidable, inverse relationship exists between the
 uncertainties of these two physical quantities. Their product at t=0
-achieves the theoretical limit of ℏ/2, which is the defining property of
+achieves the theoretical limit of $\hbar/2$, which is the defining property of
 minimum-uncertainty states.
 
 \textbf{The Gaussian Wave Packet as a Minimum Uncertainty State}
 
 My results highlight the special role that Gaussian wave packets play in
 quantum mechanics at the initial moment. The fact that their uncertainty
-product Δx·Δp assumes the minimum possible value, ℏ/2, at t=0 means that
+product $\Delta x \cdot \Delta p$ assumes the minimum possible value, $\hbar/2$, at t=0 means that
 these states are \textbf{minimum-uncertainty wave packets} at that
 instant. In other words, a Gaussian wave packet at t=0 describes the
 ``most classical-like'' state possible, where a particle's position and
@@ -608,9 +608,9 @@ allowed by quantum mechanics.
 \textbf{Time Evolution of Uncertainty and Correlation Development}
 
 The study of time evolution shows that although the position uncertainty
-(Δx(t)) increases during free evolution, the momentum uncertainty (Δp)
-remains constant. Consequently, the uncertainty product, Δx(t)·Δp, also
-increases over time and strictly exceeds ℏ/2 for t\textgreater0. This is
+($\Delta x(t)$) increases during free evolution, the momentum uncertainty ($\Delta p$)
+remains constant. Consequently, the uncertainty product, $\Delta x(t) \cdot \Delta p$, also
+increases over time and strictly exceeds $\hbar/2$ for $t>0$. This is
 in perfect agreement with the generalized Schrödinger--Robertson
 relation, as position-momentum correlations develop during free
 propagation. The minimum-uncertainty property is thus a feature of the
@@ -638,21 +638,21 @@ packets in one spatial dimension. The key findings of this study are:
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \textbf{Quantitative verification}: The uncertainty product Δx·Δp
-  consistently equals ℏ/2 (0.5 in atomic units) at t=0 across all
+  \textbf{Quantitative verification}: The uncertainty product $\Delta x \cdot \Delta p$
+  consistently equals $\hbar/2$ (0.5 in atomic units) at t=0 across all
   initial conditions, confirming that Gaussian wave packets saturate the
   Heisenberg bound and achieve minimum uncertainty at the initial time.
 \item
   \textbf{Reciprocal relationship}: Position and momentum uncertainties
-  exhibit the predicted inverse proportionality Δp = ℏ/(2Δx),
+  exhibit the predicted inverse proportionality $\Delta p = \hbar/(2\Delta x)$,
   demonstrated both numerically and visually through Fourier-transformed
   distributions.
 \item
   \textbf{Wave packet spreading}: Free time evolution shows monotonic
-  growth of position uncertainty Δx(t) while momentum uncertainty Δp
+  growth of position uncertainty $\Delta x(t)$ while momentum uncertainty $\Delta p$
   remains constant, consistent with the analytical prediction for free
-  Gaussian packets. The uncertainty product exceeds ℏ/2 for
-  t\textgreater0 due to correlation development.
+  Gaussian packets. The uncertainty product exceeds $\hbar/2$ for
+  $t>0$ due to correlation development.
 \item
   \textbf{Minimum uncertainty states at initial time}: The results
   confirm that Gaussian wave packets represent optimal quantum states at
@@ -784,7 +784,7 @@ The complete source code is available at: {[}GitHub repository URL{]}
 \NormalTok{    Delta\_p }\OperatorTok{=}\NormalTok{ compute\_uncertainty(p, rho\_p, }\DecValTok{2}\OperatorTok{*}\NormalTok{np.pi}\OperatorTok{/}\NormalTok{L)}
     
 \NormalTok{    product }\OperatorTok{=}\NormalTok{ Delta\_x }\OperatorTok{*}\NormalTok{ Delta\_p}
-    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"σₓ=}\SpecialCharTok{\{}\NormalTok{sigma\_x}\SpecialCharTok{:.2f\}}\SpecialStringTok{: Δx·Δp=}\SpecialCharTok{\{}\NormalTok{product}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"sigma\_x=}\SpecialCharTok{\{}\NormalTok{sigma\_x}\SpecialCharTok{:.2f\}}\SpecialStringTok{: Delta\_x*Delta\_p=}\SpecialCharTok{\{}\NormalTok{product}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -796,7 +796,7 @@ Performance}\label{a.3-computational-performance}
 \item
   Single uncertainty calculation: \textasciitilde10 ms
 \item
-  Full σₓ scan (16 points): \textasciitilde160 ms
+  Full $\sigma_x$ scan (16 points): \textasciitilde160 ms
 \item
   Time evolution (500 steps): \textasciitilde1.5 s
 \item
